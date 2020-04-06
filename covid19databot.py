@@ -22,12 +22,15 @@ import logging
 import os
 import csv
 import io
+from pywikibot.specialbots import UploadRobot
 
 WORLD_MAP_TEMPLATE = "File:BlankMap-World.svg"
 WORLD_MAP_TEMPLATE_FILE = "BlankMap-World.svg"
 WORLD_MAP_DATA_FILE = 'Covid19DataBot-Case-Data-World.svg'
 
 WORLD_CASE_DATA_URL_TEMPLATE = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/%s.csv"
+
+CHUNK_SIZE = 1 << 20
 
 ISO_CODES = {
     'Afghanistan': 'AF',
@@ -326,9 +329,10 @@ def injectCSS(css):
     with open(WORLD_MAP_DATA_FILE, 'w') as file:
         file.write(data)
 
-
 def uploadWorldCaseDataMap():
-    pass
+    description = 'COVID-19 case data by country'
+    bot = UploadRobot(WORLD_MAP_DATA_FILE, description=description, verifyDescription=False)
+    bot.run()
 
 def worldCaseDataUrl(date):
     return WORLD_CASE_DATA_URL_TEMPLATE % (date.strftime('%m-%d-%Y'),)
