@@ -17,19 +17,24 @@
 
 import pywikibot
 
+WORLD_MAP_TEMPLATE = "File:BlankMap-World.svg"
+WORLD_MAP_FILE = "BlankMap-World.svg"
+
 def main():
     "Main function for the COVID-19 data bot"
     updateWorldCaseDataMap()
 
 def updateWorldCaseDataMap():
     "Update the SVG world case data map on Wikimedia Commons"
-    downloadMapTemplate()
+    downloadWorldMapTemplate()
     downloadWorldCaseData()
     createWorldCaseDataMap()
     uploadWorldCaseDataMap()
 
-def downloadMapTemplate():
-    pass
+def downloadWorldMapTemplate():
+    site = pywikibot.Site('commons', 'commons')
+    image = pywikibot.FilePage(site, WORLD_MAP_TEMPLATE)
+    image.download(WORLD_MAP_FILE)
 
 def downloadWorldCaseData():
     pass
