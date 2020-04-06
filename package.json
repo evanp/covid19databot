@@ -1,0 +1,23 @@
+{
+  "name": "covid19databot",
+  "version": "0.1.0",
+  "description": "Bot for copying COVID-19 case data from English Wikipedia into tabular documents",
+  "main": "covid19databot.js",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanp/covid19databot.git"
+  },
+  "author": "Evan Prodromou <eprodromou@wikimedia.org>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/evanp/covid19databot/issues"
+  },
+  "homepage": "https://github.com/evanp/covid19databot#readme"
+}

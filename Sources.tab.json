@@ -1,0 +1,50 @@
+{
+    "license": "CC0-1.0",
+    "description": {
+        "en": "ISO-3166 code to en wp source"
+    },
+    "schema": {
+        "fields": [
+            {
+                "name": "code",
+                "type": "string",
+                "title": {
+                    "en": "ISO 3166 code for location"
+                }
+            },
+            {
+                "name": "source",
+                "type": "string",
+                "title": {
+                    "en": "Page on en:wp with data source"
+                }
+            }
+        ]
+    },
+    "data": [
+        [
+            "CA",
+            "Template:2019–20_coronavirus_pandemic_data/Canada_medical_cases_chart"
+        ],
+        [
+            "CA-QC",
+            "Template:2019–20_coronavirus_pandemic_data/Canada/Quebec_medical_cases_chart"
+        ],
+        [
+            "US-IN",
+            "Template:2019-20_coronavirus_pandemic_data/United_States/Indiana_medical_cases_chart"
+        ],
+        [
+            "US",
+            "Template:2019–20_coronavirus_pandemic_data/United_States_medical_cases_chart"
+        ],
+        [
+            "US-CA",
+            "Template:2019-20_coronavirus_pandemic_data/United_States/California_medical_cases_chart"
+        ],
+        [
+            "US-NY",
+            "Template:2019-20_coronavirus_pandemic_data/United_States/New_York_State_medical_cases_chart"
+        ]
+    ]
+}
