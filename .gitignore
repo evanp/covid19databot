@@ -142,6 +142,7 @@ cython_debug/
 pywikibot.lwp
 throttle.ctrl
 apicache-py3
+user-config.py
 
 # our own cruft
 BlankMap-World.svg
