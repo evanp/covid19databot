@@ -330,7 +330,7 @@ def injectCSS(css):
         file.write(data)
 
 def uploadWorldCaseDataMap():
-    description = 'COVID-19 case data by country'
+    description = '{{cc0}} COVID-19 case data by country'
     bot = UploadRobot(WORLD_MAP_DATA_FILE, description=description, verifyDescription=False, ignoreWarning=True)
     bot.run()
 
