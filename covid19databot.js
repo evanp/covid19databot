@@ -48,11 +48,12 @@ let getSources = async function() {
 
 let pageUrl = function(pageName) {
     let escaped = escape(pageName)
-    return `https://en.wikipedia.org/w/index.php?action=raw&title=${escaped}`
+    return `https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvslots=*&rvprop=content&formatversion=2&format=json&titles=${escaped}`
 }
 
 let pageToData = function(page) {
     let data = []
+    console.log(page)
     let ma = page.match(/{{Medical cases chart\/Row\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|/g)
     if (ma) {
         for (let i = 0; i < ma.length; i++) {
@@ -72,6 +73,14 @@ let putData = async function(cc, data) {
     return writeFile(`${cc}.tab.json`, contents, 'utf8')
 }
 
+let getPage = async function(pageName) {
+    let pu = pageUrl(pageName)
+    console.log(`fetching ${pu}`)
+    let res = await fetch(pu, {headers: {'User-Agent': 'Covid19DataBot/0.1.0'}})
+    let json = await res.json()
+     return json.query.pages[0].revisions[0].slots.main.content
+}
+
 let main = async function() {
     let sources = await getSources()
     for (let i = 0; i < sources.length; i++) {
@@ -79,15 +88,16 @@ let main = async function() {
         let cc = source[0]
         let pageName = source[1]
         console.log(`Getting data for ${cc} from ${pageName}`)
-        let pu = pageUrl(pageName)
-        console.log(`fetching ${pu}`)
-        let res = await fetch(pu)
-        let page = await res.text()
-        console.log(page.length)
-        let data = pageToData(page)
-        console.log(data.length)
-        let finished = await putData(cc, data)
-    }
+        try {
+            page = await getPage(pageName)
+            console.log(page.length)
+            let data = pageToData(page)
+            console.log(data.length)
+            let finished = await putData(cc, data)
+        } catch (err) {
+            console.error(err)
+        }
+     }
 }
 
 main()
