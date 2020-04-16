@@ -6,6 +6,7 @@ let fetch = require('node-fetch')
 let readFile = util.promisify(fs.readFile)
 let writeFile = util.promisify(fs.writeFile)
 let {URLSearchParams, URL} = require('url')
+let path = require('path')
 
 const SOURCES_FILE = './Sources.tab.json'
 const SCHEMA = {
@@ -40,6 +41,8 @@ const SCHEMA = {
         }
     ]
 }
+
+DATA_DIR = 'data'
 
 let getSources = async function() {
     let contents = await readFile(SOURCES_FILE, 'utf8')
@@ -86,12 +89,12 @@ let pageToData = function(page) {
     return data
 }
 
-let putData = async function(cc, data) {
+let putData = async function(cc, data, dir) {
     let json = {}
     json.schema = SCHEMA
     json.data = data
     let contents = JSON.stringify(json, null, 2)
-    return writeFile(`${cc}.tab.json`, contents, 'utf8')
+    return writeFile(path.join(DATA_DIR, `${cc}.tab.json`), contents, 'utf8')
 }
 
 let getPage = async function(pageName) {
