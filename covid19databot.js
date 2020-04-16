@@ -65,7 +65,7 @@ let pageUrl = function(pageName) {
 }
 
 let toNum = function(str) {
-    if (!str) {
+    if (typeof(str) != 'string') {
         return null
     } else if (str.length == 0) {
         return 0
