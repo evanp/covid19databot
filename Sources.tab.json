@@ -23,28 +23,244 @@
     },
     "data": [
         [
+            "AL",
+            "Template:2019–20 coronavirus pandemic data/Albania medical cases chart"
+        ],
+        [
+            "DZ",
+            "Template:2019–20 coronavirus pandemic data/Algeria medical cases chart"
+        ],
+        [
+            "AT",
+            "Template:2019–20 coronavirus pandemic data/Austria medical cases chart"
+        ],
+        [
+            "BY",
+            "Template:2019–20 coronavirus pandemic data/Belarus medical cases chart"
+        ],
+        [
+            "BE",
+            "Template:2019–20 coronavirus pandemic data/Belgium medical cases chart"
+        ],
+        [
+            "BR",
+            "Template:2019–20 coronavirus pandemic data/Brazil medical cases chart"
+        ],
+        [
+            "BG",
+            "Template:2019–20 coronavirus pandemic data/Bulgaria medical cases chart"
+        ],
+        [
+            "BF",
+            "Template:2019–20 coronavirus pandemic data/Burkina Faso medical cases chart"
+        ],
+        [
+            "CM",
+            "Template:2019–20 coronavirus pandemic data/Cameroon medical cases chart"
+        ],
+        [
+            "CO",
+            "Template:2019–20 coronavirus pandemic data/Colombia medical cases chart"
+        ],
+        [
+            "CR",
+            "Template:2019–20 coronavirus pandemic data/Costa Rica medical cases chart"
+        ],
+        [
+            "HR",
+            "Template:2019–20 coronavirus pandemic data/Croatia medical cases chart"
+        ],
+        [
+            "DK",
+            "Template:2019–20 coronavirus pandemic data/Denmark medical cases chart"
+        ],
+        [
+            "EG",
+            "Template:2019–20 coronavirus pandemic data/Egypt medical cases chart"
+        ],
+        [
+            "EE",
+            "Template:2019–20 coronavirus pandemic data/Estonia medical cases chart"
+        ],
+        [
+            "FI",
+            "Template:2019–20 coronavirus pandemic data/Finland medical cases chart"
+        ],
+        [
+            "FR",
+            "Template:2019–20 coronavirus pandemic data/France medical cases chart"
+        ],
+        [
+            "GE",
+            "Template:2019–20 coronavirus pandemic data/Georgia medical cases chart"
+        ],
+        [
+            "DE",
+            "Template:2019–20 coronavirus pandemic data/Germany medical cases chart"
+        ],
+        [
+            "HU",
+            "Template:2019–20 coronavirus pandemic data/Hungary medical cases chart"
+        ],
+        [
+            "IS",
+            "Template:2019–20 coronavirus pandemic data/Iceland medical cases chart"
+        ],
+        [
+            "IN",
+            "Template:2019–20 coronavirus pandemic data/India medical cases chart"
+        ],
+        [
+            "ID",
+            "Template:2019–20 coronavirus pandemic data/Indonesia medical cases chart"
+        ],
+        [
+            "IR",
+            "Template:2019–20 coronavirus pandemic data/Iran medical cases chart"
+        ],
+        [
+            "IE",
+            "Template:2019–20 coronavirus pandemic data/Republic of Ireland medical cases chart"
+        ],
+        [
+            "IL",
+            "Template:2019–20 coronavirus pandemic data/Israel medical cases chart"
+        ],
+        [
+            "IT",
+            "Template:2019–20 coronavirus pandemic data/Italy medical cases chart"
+        ],
+        [
+            "JP",
+            "Template:2019–20 coronavirus pandemic data/Japan medical cases chart"
+        ],
+        [
+            "LV",
+            "Template:2019–20 coronavirus pandemic data/Latvia medical cases chart"
+        ],
+        [
+            "LT",
+            "Template:2019–20 coronavirus pandemic data/Lithuania medical cases chart"
+        ],
+        [
+            "LU",
+            "Template:2019–20 coronavirus pandemic data/Luxembourg medical cases chart"
+        ],
+        [
+            "MY",
+            "Template:2019–20 coronavirus pandemic data/Malaysia medical cases chart"
+        ],
+        [
+            "MD",
+            "Template:2019–20 coronavirus pandemic data/Moldova medical cases chart"
+        ],
+        [
+            "MA",
+            "Template:2019–20 coronavirus pandemic data/Morocco medical cases chart"
+        ],
+        [
+            "NL",
+            "Template:2019–20 coronavirus pandemic data/Netherlands medical cases chart"
+        ],
+        [
+            "NO",
+            "Template:2019–20 coronavirus pandemic data/Norway medical cases chart"
+        ],
+        [
+            "PH",
+            "Template:2019–20 coronavirus pandemic data/Philippines medical cases chart"
+        ],
+        [
+            "PL",
+            "Template:2019–20 coronavirus pandemic data/Poland medical cases chart"
+        ],
+        [
+            "PT",
+            "Template:2019–20 coronavirus pandemic data/Portugal medical cases chart"
+        ],
+        [
+            "RO",
+            "Template:2019–20 coronavirus pandemic data/Romania medical cases chart"
+        ],
+        [
+            "RU",
+            "Template:2019–20 coronavirus pandemic data/Russia medical cases chart"
+        ],
+        [
+            "SM",
+            "Template:2019–20 coronavirus pandemic data/San Marino medical cases chart"
+        ],
+        [
+            "RS",
+            "Template:2019–20 coronavirus pandemic data/Serbia medical cases chart"
+        ],
+        [
+            "SG",
+            "Template:2019–20 coronavirus pandemic data/Singapore medical cases chart"
+        ],
+        [
+            "SK",
+            "Template:2019–20 coronavirus pandemic data/Slovakia medical cases chart"
+        ],
+        [
+            "SI",
+            "Template:2019–20 coronavirus pandemic data/Slovenia medical cases chart"
+        ],
+        [
+            "ZA",
+            "Template:2019–20 coronavirus pandemic data/South Africa medical cases chart"
+        ],
+        [
+            "ES",
+            "Template:2019–20 coronavirus pandemic data/Spain medical cases chart"
+        ],
+        [
+            "SE",
+            "Template:2019–20 coronavirus pandemic data/Sweden medical cases chart"
+        ],
+        [
+            "CH",
+            "Template:2019–20 coronavirus pandemic data/Switzerland medical cases chart"
+        ],
+        [
+            "TH",
+            "Template:2019–20 coronavirus pandemic data/Thailand medical cases chart"
+        ],
+        [
+            "TN",
+            "Template:2019–20 coronavirus pandemic data/Tunisia medical cases chart"
+        ],
+        [
+            "TR",
+            "Template:2019–20 coronavirus pandemic data/Turkey medical cases chart"
+        ],
+        [
+            "UA",
+            "Template:2019–20 coronavirus pandemic data/Ukraine medical cases chart"
+        ],
+        [
+            "AE",
+            "Template:2019–20 coronavirus pandemic data/United Arab Emirates medical cases chart"
+        ],
+        [
+            "GB",
+            "Template:2019–20 coronavirus pandemic data/United Kingdom medical cases chart"
+        ],
+        [
+            "VN",
+            "Template:2019–20 coronavirus pandemic data/Vietnam medical cases chart"
+        ],
+        [
+            "AU",
+            "Template:2019–20 coronavirus pandemic data/Australia medical cases chart"
+        ],
+        [
             "CA",
-            "Template:2019–20_coronavirus_pandemic_data/Canada_medical_cases_chart"
-        ],
-        [
-            "CA-QC",
-            "Template:2019–20_coronavirus_pandemic_data/Canada/Quebec_medical_cases_chart"
-        ],
-        [
-            "US-IN",
-            "Template:2019–20 coronavirus pandemic data/United States/Indiana medical cases chart"
+            "Template:2019–20 coronavirus pandemic data/Canada medical cases chart"
         ],
         [
             "US",
-            "Template:2019–20_coronavirus_pandemic_data/United_States_medical_cases_chart"
-        ],
-        [
-            "US-CA",
-            "Template:2019-20_coronavirus_pandemic_data/United_States/California_medical_cases_chart"
-        ],
-        [
-            "US-NY",
-            "Template:2019–20 coronavirus pandemic data/United States/New York State medical cases chart"
+            "Template:2019–20 coronavirus pandemic data/United States medical cases chart"
         ]
     ]
 }

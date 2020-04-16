@@ -5,6 +5,7 @@ let fs = require('fs')
 let fetch = require('node-fetch')
 let readFile = util.promisify(fs.readFile)
 let writeFile = util.promisify(fs.writeFile)
+let {URLSearchParams, URL} = require('url')
 
 const SOURCES_FILE = './Sources.tab.json'
 const SCHEMA = {
@@ -47,8 +48,17 @@ let getSources = async function() {
 }
 
 let pageUrl = function(pageName) {
-    let escaped = escape(pageName)
-    return `https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvslots=*&rvprop=content&formatversion=2&format=json&titles=${escaped}`
+    let pu = new URL('https://en.wikipedia.org/w/api.php')
+    pu.search = new URLSearchParams({
+        'action': 'query',
+        'prop': 'revisions',
+        'rvslots': '*',
+        'rvprop': 'content',
+        'formatversion': 2,
+        'format': 'json',
+        'titles': pageName
+    })
+    return pu.toString()
 }
 
 let pageToData = function(page) {
