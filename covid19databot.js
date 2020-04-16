@@ -61,15 +61,26 @@ let pageUrl = function(pageName) {
     return pu.toString()
 }
 
+let toNum = function(str) {
+    if (!str) {
+        return null
+    } else if (str.length == 0) {
+        return 0
+    } else {
+        return parseInt(str)
+    }
+}
+
 let pageToData = function(page) {
     let data = []
-    console.log(page)
-    let ma = page.match(/{{Medical cases chart\/Row\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|/g)
-    if (ma) {
-        for (let i = 0; i < ma.length; i++) {
-            const m = ma[i]
-            const f = m.match(/{{Medical cases chart\/Row\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|/)
-            data.push(f[1], f[2], f[3], f[4])
+    let m = page.match(/\|data=(.*?)\|/s)
+    if (m) {
+        let lines = m[1].split('\n')
+        for (line of lines) {
+            if (line.length > 0) {
+                let row = line.split(';')
+                data.push([row[0], toNum(row[1]), toNum(row[2]), toNum(row[3])])
+            }
         }
     }
     return data
