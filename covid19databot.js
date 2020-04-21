@@ -76,7 +76,7 @@ let toNum = function(str) {
 
 let pageToData = function(page) {
     let data = []
-    let m = page.match(/\|data=(.*?)\|/s)
+    let m = page.match(/\|\s*data\s*=(.*?)\|/s)
     if (m) {
         let lines = m[1].split('\n')
         for (line of lines) {
