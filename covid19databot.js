@@ -82,19 +82,28 @@ let pageToData = function(page) {
         for (line of lines) {
             if (line.length > 0) {
                 let row = line.split(';')
-                data.push([row[0], toNum(row[1]), toNum(row[2]), toNum(row[3])])
+                if (typeof row[0] == 'string' && row[0].length > 0) {
+                    data.push([row[0], toNum(row[1]), toNum(row[2]), toNum(row[3])])
+                }
             }
         }
     }
     return data
 }
 
-let putData = async function(cc, data, dir) {
+let putJSON = async function(cc, data, dir) {
     let json = {}
     json.schema = SCHEMA
     json.data = data
     let contents = JSON.stringify(json, null, 2)
     return writeFile(path.join(DATA_DIR, `${cc}.tab.json`), contents, 'utf8')
+}
+
+let putCSV = async function(cc, data, dir) {
+    let header = "date,deaths,recoveries,cases"
+    let rows = data.map((row) => `"${row[0]}",${row.slice(1).join(",")}`)
+    let contents = `${header}\n${rows.join('\n')}\n`
+    return writeFile(path.join(DATA_DIR, `${cc}.csv`), contents, 'utf8')
 }
 
 let getPage = async function(pageName) {
@@ -117,7 +126,8 @@ let main = async function() {
             console.log(page.length)
             let data = pageToData(page)
             console.log(data.length)
-            let finished = await putData(cc, data)
+            let json = await putJSON(cc, data)
+            let csv = await putCSV(cc, data)
         } catch (err) {
             console.error(err)
         }
