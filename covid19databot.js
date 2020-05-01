@@ -5,7 +5,7 @@ let fs = require('fs')
 let fetch = require('node-fetch')
 let readFile = util.promisify(fs.readFile)
 let writeFile = util.promisify(fs.writeFile)
-let {URLSearchParams, URL} = require('url')
+let { URLSearchParams, URL } = require('url')
 let path = require('path')
 
 const SOURCES_FILE = './Sources.tab.json'
@@ -44,13 +44,13 @@ const SCHEMA = {
 
 DATA_DIR = 'data'
 
-let getSources = async function() {
+let getSources = async function () {
     let contents = await readFile(SOURCES_FILE, 'utf8')
     let data = JSON.parse(contents)
     return data.data
 }
 
-let pageUrl = function(pageName) {
+let pageUrl = function (pageName) {
     let pu = new URL('https://en.wikipedia.org/w/api.php')
     pu.search = new URLSearchParams({
         'action': 'query',
@@ -64,8 +64,8 @@ let pageUrl = function(pageName) {
     return pu.toString()
 }
 
-let toNum = function(str) {
-    if (typeof(str) != 'string') {
+let toNum = function (str) {
+    if (typeof (str) != 'string') {
         return null
     } else if (str.length == 0) {
         return 0
@@ -74,7 +74,7 @@ let toNum = function(str) {
     }
 }
 
-let pageToData = function(page) {
+let pageToData = function (page) {
     let data = []
     let m = page.match(/\|\s*data\s*=(.*?)\|/s)
     if (m) {
@@ -91,7 +91,7 @@ let pageToData = function(page) {
     return data
 }
 
-let putJSON = async function(cc, data, dir) {
+let putJSON = async function (cc, data, dir) {
     let json = {}
     json.schema = SCHEMA
     json.data = data
@@ -99,22 +99,22 @@ let putJSON = async function(cc, data, dir) {
     return writeFile(path.join(DATA_DIR, `${cc}.tab.json`), contents, 'utf8')
 }
 
-let putCSV = async function(cc, data, dir) {
+let putCSV = async function (cc, data, dir) {
     let header = "date,deaths,recoveries,cases"
     let rows = data.map((row) => `"${row[0]}",${row.slice(1).join(",")}`)
     let contents = `${header}\n${rows.join('\n')}\n`
     return writeFile(path.join(DATA_DIR, `${cc}.csv`), contents, 'utf8')
 }
 
-let getPage = async function(pageName) {
+let getPage = async function (pageName) {
     let pu = pageUrl(pageName)
     console.log(`fetching ${pu}`)
-    let res = await fetch(pu, {headers: {'User-Agent': 'Covid19DataBot/0.1.0'}})
+    let res = await fetch(pu, { headers: { 'User-Agent': 'Covid19DataBot/0.1.0' } })
     let json = await res.json()
-     return json.query.pages[0].revisions[0].slots.main.content
+    return json.query.pages[0].revisions[0].slots.main.content
 }
 
-let main = async function() {
+let main = async function () {
     let sources = await getSources()
     for (let i = 0; i < sources.length; i++) {
         let source = sources[i]
@@ -131,7 +131,7 @@ let main = async function() {
         } catch (err) {
             console.error(err)
         }
-     }
+    }
 }
 
 main()
