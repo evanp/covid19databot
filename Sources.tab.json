@@ -469,6 +469,42 @@
           [
             "US-WY",
             "Template:2019–20 coronavirus pandemic data/United States/Wyoming medical cases chart"
-          ]
+          ],
+          [
+              "CA-AB",
+              "Template:2019–20 coronavirus pandemic data/Alberta medical cases chart"
+          ],
+          [
+              "CA-BC",
+              "Template:2019–20 coronavirus pandemic data/Canada/British Columbia medical cases chart"
+          ],
+          [
+              "CA-MB",
+              "Template:2019–20 coronavirus pandemic data/Canada/Manitoba medical cases chart"
+          ],
+          [
+              "CA-NB",
+              "Template:2019–20 coronavirus pandemic data/New Brunswick medical cases chart"
+          ],
+          [
+            "CA-NL",
+            "Template:2019–20 coronavirus pandemic data/Canada/Newfoundland and Labrador medical cases chart"
+          ],
+          [
+              "CA-NS",
+              "Template:2019–20 coronavirus pandemic data/Canada/Nova Scotia medical cases chart"
+          ],
+        [
+            "CA-NU",
+            "Template:2019–20 coronavirus pandemic data/Nunavut medical cases chart"
+        ],
+        [
+            "CA-ON",
+            "Template:2019–20 coronavirus pandemic data/Canada/Ontario medical cases chart"
+        ],
+        [
+            "CA-QC",
+            "Template:2019–20 coronavirus pandemic data/Canada/Quebec medical cases chart"
         ]
+    ]
 }
